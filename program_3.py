@@ -1,32 +1,24 @@
-# Programming Excersize 3-13
+#Logan's Week 3 Shipping Charges
 
-# The Fast Freight Shipping Company charges the following rates:
+#Ask for the weight of package
+package = float(input("What's the weight of your package?: "))
 
-# Weight    	Price Per Pound
-# 2 pounds or less   	$1.50
-# Over 2 pounds but not more than 6 pounds  	$3.00
-# Over 6 pounds but not more than 10 pounds	$4.00
-# Over 10 pounds	$4.75
-# Write a program which calculates the shipping charge and displays the total.
+#Got the weight, got to find the cost
 
-def weight_conversion(weight):
-    # Calculate the shipping charge.
-    shippingCost = 0.0
-    ######################
-    # WRITE YOUR CODE HERE
-    ######################
-    
-    return shippingCost
+Ffirst, making sure they have a package
+if package <= 0:
+    print("You have package that weights nothing? What are you sending?")
 
-#### This piece of the code has been done for you,
-#### you only need to worry about the actual shipping 
-#### charge logic in the weight_conversion function
-if __name__ == '__main__':
-    # Local variables
-    weight = 0.0
-    shippingCost = 0.0
-    # Get package weight from the user.
-    weight = float(input('Enter the weight of the package: '))
-    # Display the shipping charge.
-    shippingCost = weight_conversion(weight)
-    print ('Shipping charge: $', format(shippingCost, '.2f'))
+#Now, finding their cost with elifs'
+elif package <= 2:
+    print("That'll be $1.50.")
+
+elif package >= 2 and package <= 6:
+    print("That'll be $3.00.")
+
+elif package > 6 and package <=  10:
+    print("That'll be $4.00.")
+
+#Finally, if they aren't any of the above, they are a 10lbs =< package
+else:
+    print("That'll be $4.75.")
