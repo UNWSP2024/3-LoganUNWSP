@@ -1,27 +1,24 @@
-# Write a program that asks the user to enter a person's age.  The program should display a message indicating whether the person is an infant, a child, a teenager, or an adult.  Following are the guidelines:
+#Logan's Week 3 Age Classifer
 
-# If the person is 1 year old or less, it should display "infant" (without quotes).
-# If the person is older than 1 year, but younger than 13 years, it should display "child".
-# If the person is at least 13 years old, but less than 20 years old, it should display "teenager".
-# If the person is at least 20 year old, it should display "adult".
+#Ask the age
+age = int(input("What's your age?: "))
 
-def categorize_age(age):
-    ageCategory = "TBD"
-    ######################
-    # WRITE YOUR CODE HERE
-    ######################
+#Got the age, figure out what category the age falls under
 
+#First, making sure they are born with if
+if age <= 0:
+    print("You aren't even born yet?")
 
-    return ageCategory
+#Now, finding their category with elifs'
+elif age <= 1:
+    print("You are a infant (can you read this?).")
 
+elif age >= 2 and age < 13:
+    print("You are a child.")
 
-#### This piece of the code has been done for you,
-#### you only need to worry about the actual shipping 
-#### charge logic in the weight_conversion function
-if __name__ == '__main__':
-    # Local variables
-    # Get age from the user.
-    age = float(input("Enter the person's age: "))
-    # Display the age
-    ageBucket = categorize_age(age)
-    print (ageBucket)
+elif age >= 13 and age < 20:
+    print("You are a teenager.")
+
+#Finally, if they aren't any of the above, they are an adult.
+else:
+    print("You are an adult.")
